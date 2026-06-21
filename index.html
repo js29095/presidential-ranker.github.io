@@ -1,13 +1,125 @@
 <!DOCTYPE html>
-<html>
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<html lang="en">
 <head>
-<title>Presidential Ranker</title>
+  <meta charset="UTF-8">
+  <title>AMPU Presidential Actions Database</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; background: #f8fafc; color: #0f172a; }
+    nav { background: #1e293b; padding: 1rem 2rem; color: white; display: flex; gap: 2rem; }
+    nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: white; }
+
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .card h2 { margin-top: 0; }
+    .card a { text-decoration: none; color: #1e40af; font-weight: 600; }
+
+    .updates {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .update-item {
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1e293b;
+      color: #cbd5e1;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Presidential Ranker</h1>
-<h2>Presented by Joshua Sweetman and Jonathan Hobrotch</h2>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="presidents/index.html">Presidents</a>
+    <a href="actions/index.html">Actions</a>
+    <a href="actions/rankings.html">Rankings</a>
+    <a href="actions/timeline.html">Timeline</a>
+    <a href="data/actions.csv">Data</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>AMPU Presidential Actions Database</h1>
+    <p>
+      A comprehensive, alternate‑history record of presidential actions, categorized, ranked, and structured for analysis across the entire AMPU timeline.
+    </p>
+  </section>
+
+  <!-- Quick Access Grid -->
+  <section class="grid">
+    <div class="card">
+      <h2>Presidents</h2>
+      <p>Browse actions by individual presidents across the AMPU timeline.</p>
+      <a href="presidents/index.html">View Presidents →</a>
+    </div>
+
+    <div class="card">
+      <h2>Actions</h2>
+      <p>Explore all recorded actions, sortable by year, category, and president.</p>
+      <a href="actions/index.html">View Actions →</a>
+    </div>
+
+    <div class="card">
+      <h2>Rankings</h2>
+      <p>See actions ranked by default value or category weight.</p>
+      <a href="actions/rankings.html">View Rankings →</a>
+    </div>
+  </section>
+
+  <!-- Latest Updates -->
+  <section class="updates">
+    <h2>Latest Updates</h2>
+
+    <div class="update-item">
+      <strong>June 2026:</strong> Added new presidential actions for the 1835 session.
+    </div>
+
+    <div class="update-item">
+      <strong>May 2026:</strong> Updated categories and default ranking values.
+    </div>
+
+    <div class="update-item">
+      <strong>April 2026:</strong> Initial dataset imported from spreadsheet.
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    AMPU Project • Data stored in <a href="data/actions.csv" style="color:#93c5fd;">actions.csv</a> • Hosted on GitHub Pages
+  </footer>
 
 </body>
 </html>
